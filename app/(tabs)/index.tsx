@@ -1,6 +1,7 @@
-import { Text, View, StyleSheet, SafeAreaView, Image, FlatList } from "react-native";
-import React from "react";
+import { FlatList, TextInput, View, Text } from "react-native";
+import React, { useState } from 'react';
 import WisataDetail from "../../components/Wisata";
+
 
   const data = [
     {
@@ -129,6 +130,7 @@ import WisataDetail from "../../components/Wisata";
     return (
       <FlatList 
         data={data}
+        numColumns={2}
         renderItem={({ item }) => <WisataDetail item={item} />}
         keyExtractor={(item) => item.id}
       />
@@ -136,23 +138,3 @@ import WisataDetail from "../../components/Wisata";
   };
   
   export default MyList;
-const styles = StyleSheet.create({
-      item: {
-      padding: 90,
-      borderBottomWidth: 1,
-      borderBottomColor: '#ccc',
-    },
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    backgroundColor: "#FDECF6"
-  },
-  title: {
-    fontWeight: "bold",
-    fontSize: 40,
-  },
-  text: {
-    color: "#A78298",
-    fontSize: 20,
-  },
-});

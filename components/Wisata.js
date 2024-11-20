@@ -36,13 +36,15 @@ const WisataDetail = ({ item }) => {
 
 const styles = StyleSheet.create({
   container: {
-    borderWidth: 2,
-    borderColor: 'black',
+    flex: 1,
+    borderWidth: 1,
     borderRadius: 10,
+    borderColor: "#8f838c",
     padding: 20,
     margin: 20,
+    justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#FDECF6"
+    backgroundColor: "#FDECF6",
   },
 });
 
