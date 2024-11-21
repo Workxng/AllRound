@@ -18,7 +18,7 @@ const WisataDetail = ({ item }) => {
           source={{
             uri: item.gambar,
             height: 150,
-            width: 250,
+            width: 150,
             resizeMode: "cover",
           }}
         />
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     borderColor: "#8f838c",
+    width: 250,
     padding: 20,
     margin: 20,
     justifyContent: "center",

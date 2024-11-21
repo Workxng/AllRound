@@ -1,7 +1,43 @@
-import { FlatList, TextInput, View, Text } from "react-native";
-import React, { useState } from 'react';
+import { FlatList, Text, View, StyleSheet} from "react-native";
+import React from 'react';
 import WisataDetail from "../../components/Wisata";
+import { SafeAreaView } from "react-native-safe-area-context";
 
+
+const filter = [
+  {
+    id: "1",
+    tempat: "Jawa",
+  },
+  {
+    id: "2",
+    tempat: "Bali",
+  },
+  {
+    id: "3",
+    tempat: "Sumatera",
+  },
+  {
+    id: "4",
+    tempat: "Sulawesi",
+  },
+  {
+    id: "5",
+    tempat: "Kalimantan",
+  },
+  {
+    id: "6",
+    tempat: "Papua",
+  },
+  {
+    id: "7",
+    tempat: "Nusa Tenggara",
+  },
+  {
+    id: "8",
+    tempat: "Maluku",
+  },
+]
 
   const data = [
     {
@@ -126,15 +162,41 @@ import WisataDetail from "../../components/Wisata";
     }
   ];
 
-  const MyList = () => {
-    return (
+export default function HomeScreen() {
+      return (
+        <SafeAreaView>
+                <FlatList 
+        data={filter}
+        horizontal
+        renderItem={({ item }) => (
+          <Text style={styles.container}>{item.tempat}</Text>
+        )}
+        showsHorizontalScrollIndicator={false}
+        keyExtractor={(item) => item.id}
+      />
       <FlatList 
         data={data}
         numColumns={2}
         renderItem={({ item }) => <WisataDetail item={item} />}
         keyExtractor={(item) => item.id}
-      />
+      />        
+      </SafeAreaView>
     );
-  };
+  }
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      borderWidth: 1,
+      borderRadius: 10,
+      borderColor: "#8f838c",
+      textAlign: "center",
+      justifyContent: "center",
+      height: 40,
+      width: 200,
+      padding: 10,
+      margin: 10,
+      backgroundColor: "#FDECF6",
+    },
+  });
   
-  export default MyList;
