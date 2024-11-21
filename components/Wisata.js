@@ -17,17 +17,18 @@ const WisataDetail = ({ item }) => {
         }}
           source={{
             uri: item.gambar,
-            height: 150,
-            width: 150,
+            height: 100,
+            width: 100,
             resizeMode: "cover",
           }}
         />
         <Text style={{
           textAlign: "center",
-          fontWeight: "Bold",
         }}>{item.nama}</Text>
         <Text style={{
           textAlign: "center",
+          fontWeight: "Bold",
+
         }}>{item.lokasi}</Text>
       </View>
     </Link>
@@ -36,12 +37,12 @@ const WisataDetail = ({ item }) => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     borderWidth: 1,
-    borderRadius: 10,
+    borderRadius: 8,
     borderColor: "#8f838c",
-    width: 250,
+    width: 180,
     padding: 20,
-    margin: 10,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#FDECF6",

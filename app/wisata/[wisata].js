@@ -123,7 +123,7 @@ const data = [
       id: "20",
       gambar: "https://dlh.bulelengkab.go.id/uploads/konten/60-pentingnya-hutan-mangrove-bagi-lingkungan-hidup.jpg",
       nama: "Hutan Mangrove Bali",
-      lokasi: "Kawasan pelestarian mangrove dengan jalur trekking kayu di Bali"
+      lokasi: "Kawasan pelestarian mangrove dengan jalur trekking kayu di Bali"
     }
   ];
 
