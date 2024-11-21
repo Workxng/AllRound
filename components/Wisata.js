@@ -36,13 +36,12 @@ const WisataDetail = ({ item }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     borderWidth: 1,
     borderRadius: 10,
     borderColor: "#8f838c",
     width: 250,
     padding: 20,
-    margin: 20,
+    margin: 10,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#FDECF6",

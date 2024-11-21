@@ -138,9 +138,8 @@ const data = [
     return (
       <SafeAreaView
         style={{
-          backgroundColor: "white",
+          backgroundColor: "#eecae0",
           flex: 1,
-          // flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
         }}

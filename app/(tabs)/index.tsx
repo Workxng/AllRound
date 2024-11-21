@@ -174,9 +174,12 @@ export default function HomeScreen() {
         showsHorizontalScrollIndicator={false}
         keyExtractor={(item) => item.id}
       />
-      <FlatList 
+      <FlatList style={{ 
+        marginTop: 10,
+        marginBottom: 80,
+        alignSelf: 'center',
+      }}  
         data={data}
-        numColumns={2}
         renderItem={({ item }) => <WisataDetail item={item} />}
         keyExtractor={(item) => item.id}
       />        
@@ -188,7 +191,7 @@ export default function HomeScreen() {
     container: {
       flex: 1,
       borderWidth: 1,
-      borderRadius: 10,
+      borderRadius: 2,
       borderColor: "#8f838c",
       textAlign: "center",
       justifyContent: "center",
